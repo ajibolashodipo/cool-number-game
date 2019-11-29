@@ -1,10 +1,18 @@
-/* font-family: 'Manjari', sans-serif;
-font-family: 'Hepta Slab', serif; */
+* {
+  margin: 0;
+  padding: 0;
+  /* font-size: 1rem; */
+}
+
 body {
   color: white;
   font-family: "Manjari", sans-serif;
   background: url(./img/number-lock-ish.jpg);
   padding: 0;
+}
+
+ul {
+  margin: 0;
 }
 
 #dark-overlay {
@@ -16,52 +24,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* header {
-  height: 100vh;
-} */
-#instructions {
-  display: none;
-  /* position: relative; */
-}
-
-/* @media screen and (max-width: 728px) {
-  #stubborn-div {
-    position: absolute;
-    top: 500px;
-  }
-} */
-
-.conclusion {
-  display: none;
-}
-
-.footer-success {
-  display: none;
-  margin-left: 20%;
-  border: 1px solid green;
-  margin-right: 20%;
-}
-
-#first-submit {
-  width: 80%;
-  margin: 2.5% 10% 10%;
-}
-#third-submit {
-  width: 80%;
-  margin: 2.5% 10% 2.5%;
-}
-
-#loading-result {
-  display: none;
-  margin: 2.5% 10% 15%;
-}
-
-#display-image {
-  height: 200px;
-  width: 200px;
-}
-
-#player-1 {
+/* #player-1 {
   margin-right: 10%;
   margin-left: 10%;
   width: 80%;
@@ -72,101 +35,363 @@ body {
   margin-left: 10%;
   width: 80%;
   padding: 0 5%;
-}
+} */
 
 h2 {
-  font-size: 3em;
-}
-li {
-  font-size: 1.5em;
-  word-spacing: 0.15em;
-  letter-spacing: 0.05em;
+  font-size: 3rem;
 }
 
-#proceed-1 {
-  display: none;
+li {
+  font-size: 1.5rem;
+  word-spacing: 0.15rem;
+  letter-spacing: 0.05rem;
 }
 
 .player-info {
-  font-size: 2em;
+  font-size: 1.7rem;
   padding: 0 10%;
+  margin-bottom: 2%;
 }
+
 .intro-text {
-  font-size: 1.5em;
-  word-spacing: 0.2em;
-  letter-spacing: 0.1em;
+  font-size: 1.5rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   padding: 0 10%;
+  text-align: center;
+}
+.intro-text-1 {
+  display: none;
 }
 .intro-text-ps {
-  font-size: 1.3em;
+  font-family: "Baskervville", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
   font-style: italic;
-  word-spacing: 0.2em;
-  letter-spacing: 0.1em;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   padding: 0 10%;
+  text-align: center;
+  margin-bottom: 2%;
 }
 .intro-header {
-  font-size: 5em;
+  font-size: 4rem;
   padding: 0 10%;
+  text-align: center;
+}
+
+.header-section {
+  padding: 5% 5% 0 5%;
+}
+
+@media only screen and (max-width: 576px) {
+  .intro-header {
+    font-size: 3.5rem;
+    padding: 0 10%;
+    text-align: center;
+  }
+  .intro-text {
+    display: none;
+  }
+  .intro-text-1 {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
+    padding: 0 10%;
+  }
+
+  .intro-text-ps {
+    font-size: 1.2rem;
+    font-style: italic;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
+    padding: 0 10%;
+    text-align: center;
+  }
+  /* .playerz {
+    width: 95%;
+    margin: 0 auto;
+  } */
+
+  .player-info {
+    font-size: 1.5rem;
+    padding: 0 10%;
+    margin: 0 2.5% 2%;
+  }
 }
 
 .name-alert {
   margin: 0 14.5%;
 }
 
-#footer-button-green,
-#footer-button-red {
+#instructions {
+  display: none;
+}
+
+#first-submit {
   width: 80%;
-  margin: 2.5% 20% 5%;
-  padding: 2.5% 0;
+  margin: 2.5% 10% 10%;
+}
+#third-submit {
+  width: 80%;
+  margin: 2.5% 10% 2.5%;
+  padding: 2%;
+}
+
+#loading-result {
+  display: none;
+  padding: 5%;
+  margin: 2.5% auto;
+  border: 1px solid turquoise;
+  text-align: center;
+  border-radius: 5%;
+}
+@media only screen and (max-width: 768px) {
+  #loading-result {
+    width: 80%;
+  }
+}
+
+#display-image {
+  height: 200px;
+  width: 200px;
+}
+#proceed-1 {
+  display: none;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid orange;
+  border-radius: 2%;
+  width: 60%;
+}
+.your-results {
+  font-size: 1.7rem;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  width: 70%;
+  display: inline-block;
+}
+
+.your-results-compute {
+  margin: 0 !important;
+}
+
+.my-form {
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #proceed-1 {
+    width: 80%;
+    margin-top: 20%;
+  }
+
+  .your-results {
+    display: block;
+    margin-bottom: 5%;
+    width: 100%;
+  }
+
+  .your-results-compute {
+    display: block;
+    margin-top: 5%;
+  }
 }
 
 #footer-department {
   display: none;
+  margin: auto;
+  text-align: center;
 }
+
+.footer-button {
+  padding: 2% 10%;
+  margin: 2.5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-button {
+    padding: 2% 20%;
+  }
+  .footer-weird {
+    display: block;
+  }
+}
+
 #first-alert {
   visibility: hidden;
   border: 1px solid red;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #second-alert,
 #third-alert {
   display: none;
   border: 1px solid red;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-.card-header {
-  color: white;
-  border: 1px solid turquoise;
-  border-radius: 20%;
+/* card refactor */
+.container-inst {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+  box-sizing: border-box;
+  transform: scale(0.85, 0.85);
 }
-.list-group-item {
-  color: white;
+.player-1-inst {
   border: 1px solid turquoise;
+  border-radius: 2.5%;
+
+  overflow-wrap: break-word;
+
+  padding: 5% 5%;
+}
+.player-2-inst {
+  border: 1px solid turquoise;
+  border-radius: 2.5%;
+
+  overflow-wrap: break-word;
+  padding: 5% 5%;
+}
+
+.player-header {
+  font-size: 3em;
+  text-align: center;
+  border-bottom: 1px solid turquoise;
+  padding-bottom: 5%;
+  margin: 10%;
+}
+.container-inst ul {
+  padding: 0;
+}
+
+.container-inst ul li {
+  font-size: 1.5rem;
+  margin: 5% 5%;
+  padding-bottom: 5%;
+  border-bottom: 0.5px solid grey;
+  list-style: none;
+}
+
+.container-inst ul li:last-child {
+  border-bottom: none;
+}
+
+.third-element {
+  grid-column: 1 / span 2;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-inst {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 1fr;
+    width: 80%;
+    transform: scale(1, 1);
+  }
+
+  .third-element {
+    grid-column: 1;
+  }
+
+  .player-header {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .container-inst ul li {
+    font-size: 1.2rem;
+  }
+}
+.your-results::placeholder {
+  font-size: 1.2rem;
 }
 
 .your-results {
-  margin-left: 10%;
+  font-size: 1.4rem;
 }
 .your-results-compute {
   margin-left: 2%;
 }
 
 .error-compute {
-  margin-left: 10%;
+  width: 80%;
 }
 
 .conc-marg {
   margin: 2.5% 20% 5%;
 }
 
-/* do not try this shit at home */
-/* @media screen and (max-width: 728px) {
-  #stubborn-div {
-    position: absolute;
-    top: 500px;
-  }
-  /* insert the whole css file here 
+.conclusion {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
 
-}  */
+.footer-success {
+  display: none;
+  margin-left: 20%;
+  border: 1px solid green;
+  margin-right: 20%;
+}
+
+#real-footer {
+  background: #373b44;
+  height: 15vh;
+}
+
+.real-footer-section {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+}
+
+.real-footer-section h3 {
+  font-weight: 300;
+}
+
+.real-footer-section .fab {
+  color: #fff;
+}
+
+.real-footer-section .fab:hover {
+  color: turquoise;
+  transform: rotate(20deg);
+}
+
+.real-footer-section ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.real-footer-section ul li {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 25%;
+}
+.real-footer-section ul li a {
+  padding: 5%;
+  align-self: center;
+  margin: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .real-footer-section h3 {
+    font-size: 1rem;
+    /* padding: 5%; */
+  }
+
+  .real-footer-section .fab {
+    font-size: 1.5rem;
+    padding: 15%;
+  }
+}

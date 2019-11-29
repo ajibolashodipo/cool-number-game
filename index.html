@@ -11,41 +11,54 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Manjari:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap"
       rel="stylesheet"
     />
 
     <title>Digit Diviner</title>
   </head>
 
-  <!-- body -->
   <body>
     <div id="dark-overlay">
-      <header id="header-section" class="m-auto">
+      <header id="header" class="m-auto">
         <div class="container ">
           <div class="row">
-            <!-- <div class="col-sm-1"></div> -->
-            <div class=" header-section col-sm-12 my-5">
+            <div class=" header-section col-xs-12">
               <div>
                 <h1 id="top" class="mt-4 mx-auto intro-header">
-                  Welcome to Digit Diviner
+                  Digit Diviner
                 </h1>
                 <br />
                 <p class="intro-text">
-                  Say Hello to a game that blurs the lines that separate magic
-                  from mathematics. Less talking. Shall we begin ?<br />
+                  A game that blurs the lines that separate magic from
+                  mathematics. Less talking. Shall we begin ?<br />
                 </p>
+                <p class="intro-text-1">Magic. Inspired by Mathematics</p>
                 <p class="intro-text-ps">
                   PS: Bring a friend along 'cos it takes two to play
                 </p>
               </div>
               <form action="#">
                 <div class="row">
-                  <!-- <div class="col-sm-1"></div> -->
-                  <div class="col-sm-12 col-md-6 player-info">
-                    Player 1:<br />
+                  <div class="col-sm-12 col-md-6 player-info player-info-1">
+                    <!-- Player 1:<br /> -->
+                    <label for="player-1-name">Player 1: </label>
                     <input
                       type="text"
                       id="player-1-name"
@@ -56,24 +69,23 @@
                       required
                     />
                   </div>
-                  <!-- <div class="col-sm-3"></div> -->
+
                   <div class="col-sm-12 col-md-6 player-info ">
-                    Player 2:<br />
+                    <label for="player-2-name">Player 2: </label>
                     <input
                       type="text"
                       class="playerz form-control form-control-lg"
                       id="player-2-name"
                       name="lastname"
-                      placeholder="Enter your name"
+                      placeholder="Enter friend's name"
                       value=""
                       required
                     />
                   </div>
-                  <!-- <div class="col-sm-1"></div> -->
                 </div>
                 <br />
                 <div class="row">
-                  <div class="col-8">
+                  <div class="col-12">
                     <div
                       id="first-alert"
                       class="name-alert alert alert-danger"
@@ -95,125 +107,80 @@
                 </div>
               </form>
             </div>
-            <!-- <div class="col-sm-1"></div> -->
           </div>
         </div>
       </header>
-      <br />
 
       <section id="instructions">
-        <div id="stubborn-div" class="container">
-          <div class="row d-sm-flex d-lg-flex">
-            <!-- <div class="col-sm-1"></div> -->
-            <!-- <div class="card-group"> -->
-            <div class="col-sm-12 col-md-6 d-sm-flex ">
-              <div id="player-1" class="card-transparent">
-                <div class="card-header bg-transparent ">
-                  <h2>Player 1 Instructions</h2>
-                </div>
-                <ul
-                  class="player-list list-group bg-transparent list-group-flush"
-                >
-                  <li class="list-group-item bg-transparent">
-                    Pick a number from 1 to 9
-                  </li>
-                  <li class="list-group-item bg-transparent">
-                    Multiply the number by 2
-                  </li>
-                  <li class="list-group-item bg-transparent">
-                    Add 9 to the result
-                  </li>
-                  <li class="list-group-item bg-transparent">
-                    Multiply the result by 5
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- <div class="col-sm-2"></div> -->
-            <div class="col-sm-12 col-md-6 d-sm-flex">
-              <div id="player-2" class="card-transparent">
-                <div class="card-header bg-transparent">
-                  <h2>Player 2 Instructions</h2>
-                </div>
-                <ul
-                  class="player-list list-group bg-transparent list-group-flush"
-                >
-                  <li class="list-group-item bg-transparent">
-                    Pick a number from 1 to 9
-                  </li>
-                  <li class="list-group-item bg-transparent">
-                    Add 12 to the picked number
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- <div class="col-sm-1"></div> -->
-            <!-- </div> -->
+        <div class=" container container-inst">
+          <div class="player-1-inst">
+            <h2 class="player-header">Player 1 Instructions</h2>
+            <ul>
+              <li>Pick a number from 1 to 9</li>
+              <li>Multiply the number by 2</li>
+              <li>Add 9 to the result</li>
+              <li>Multiply the result by 5</li>
+            </ul>
           </div>
-          <br />
-          <div class="row">
-            <!-- <div class="col-sm-1"></div> -->
-            <div class="col-12">
-              <input
-                id="third-submit"
-                class="btn btn-outline-primary btn-lg"
-                type="button"
-                value="Click Here to Continue"
-              />
-            </div>
-            <!-- <div class="col-sm-1"></div> -->
+          <div class="player-2-inst">
+            <h2 class="player-header">Player 2 Instructions</h2>
+            <ul>
+              <li>Pick a number from 1 to 9</li>
+
+              <li>Add 12 to the picked number</li>
+            </ul>
           </div>
-          <br />
-          <br />
+
+          <!-- add stuff to the grid -->
+          <div class="third-element">
+            <input
+              id="third-submit"
+              class="btn btn-outline-primary btn-lg"
+              type="button"
+              value="Click Here to Continue"
+            />
+          </div>
         </div>
 
-        <!-- trial -->
+        <br />
+
         <div class="container" id="proceed-1">
-          <div class="row ">
-            <div class="col-12">
-              <h3 class="your-results">Now, add your results together:</h3>
+          <!-- formmmm -->
+          <form class="form my-form" action="#">
+            <label class="your-results" for="sum"
+              >Now, add your results together:</label
+            >
+            <br />
+            <input
+              id="sum"
+              type="number"
+              name="total"
+              class=" your-results form-control"
+              placeholder="Enter your sum"
+              value=""
+              required
+            />
 
-              <!-- trial -->
-
-              <!-- formmmm -->
-              <form class="form-inline" action="#">
-                <input
-                  id="sum"
-                  type="number"
-                  name="total"
-                  class=" your-results form-control form-control-lg"
-                  placeholder="Enter your sum"
-                  value=""
-                  required
-                />
-
-                <input
-                  id="second-submit"
-                  class="btn btn-outline-primary btn-lg your-results-compute"
-                  type="button"
-                  value="Compute"
-                />
-              </form>
-            </div>
-            <!-- <div class="col-md-1"></div> -->
-          </div>
+            <input
+              id="second-submit"
+              class="btn btn-outline-primary btn-lg your-results-compute"
+              type="button"
+              value="Compute"
+            />
+          </form>
           <br />
 
-          <div class="row">
-            <!-- <div class="col-sm-1"></div> -->
-            <div class="col-sm-6 error-compute">
-              <div id="second-alert" class="alert alert-danger" role="alert">
-                Please enter a valid number
-              </div>
+          <div class="error-compute">
+            <div id="second-alert" class="alert alert-danger" role="alert">
+              Please enter a valid number
             </div>
           </div>
+
           <br />
-          <div class="row">
-            <!-- <div class="col-sm-1"></div> -->
-            <div class="col-sm-6 error-compute">
-              <div id="third-alert" class="alert alert-danger" role="alert">
-                Your math is off. Try again
-              </div>
+
+          <div class="error-compute">
+            <div id="third-alert" class="alert alert-danger" role="alert">
+              Your math is off. Try again
             </div>
           </div>
         </div>
@@ -223,7 +190,7 @@
       </section>
 
       <section id="calculations">
-        <div class="container">
+        <div class="container container-calc">
           <div class="row">
             <!-- <div class="col-sm-1"></div> -->
             <div class="col-sm-12 col-md-6" id="loading-result">
@@ -235,59 +202,69 @@
         </div>
 
         <div class="container conclusion">
-          <div class="row">
-            <!-- <div class="col-sm-1"></div> -->
-            <div class="col-sm-12 col-md-6 ">
-              <div class="conc-marg alert alert-primary" role="alert">
-                <h4 class="player-rename">
-                  <span id="player-rename-1">Player 1: </span>
-                  <span id="result-num1" class="result-num"></span>
-                </h4>
-              </div>
-              <div class=" conc-marg alert alert-primary" role="alert">
-                <h4 class="player-rename">
-                  <span id="player-rename-2">Player 2: </span>
-                  <span id="result-num2" class="result-num"></span>
-                </h4>
-              </div>
-            </div>
-            <!-- <div class="col-sm-1"></div> -->
+          <div class="conc-marg alert alert-primary" role="alert">
+            <h4 class="player-rename">
+              <span id="player-rename-1">Player 1: </span>
+              <span id="result-num1" class="result-num"></span>
+            </h4>
+          </div>
+          <div class=" conc-marg alert alert-primary" role="alert">
+            <h4 class="player-rename">
+              <span id="player-rename-2">Player 2: </span>
+              <span id="result-num2" class="result-num"></span>
+            </h4>
           </div>
         </div>
       </section>
       <br />
       <br />
       <br />
-      <footer id="footer-section">
+      <section id="pseudo-footer">
         <div class="container" id="footer-department">
-          <div class="row">
-            <!-- <div class="col-md-1"></div> -->
-            <div class="col-sm-12 col-md-6 addw">
-              <button
-                class=" footer-correct footer-button btn btn-lg btn-success"
-                id="footer-button-green"
-              >
-                Was i correct?
-              </button>
-            </div>
-            <div class="col-sm-12 col-md-6 addw">
-              <button
-                id="footer-button-red"
-                class="footer-button btn btn-lg btn-danger"
-              >
-                One more try?
-              </button>
-            </div>
-            <!-- <div class="col-md-1"></div> -->
-          </div>
+          <button
+            class=" footer-correct footer-button btn btn-lg btn-success"
+            id="footer-button-green"
+          >
+            Was i correct?
+          </button>
+
+          <button
+            id="footer-button-red"
+            class="footer-button btn btn-lg btn-danger"
+          >
+            One more try?
+          </button>
         </div>
         <br />
 
         <div class=" footer-success alert alert-success" role="alert">
-          <h3>Duh! Of course I know I'm correct. I am not human.</h3>
+          <h3>Of course I am correct. I'm not human.</h3>
         </div>
         <br />
         <br />
+      </section>
+
+      <footer id="real-footer">
+        <div class="container real-footer-section">
+          <h3>Designed by Ajibola Shodipo.</h3>
+          <ul>
+            <li>
+              <a href="http://www.twitter.com/sho_rendipity">
+                <i class="fab fa-twitter fa-2x "></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ahmed-ajibola-shodipo/">
+                <i class="fab fa-linkedin fa-2x "></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/ajibolashodipo">
+                <i class="fab fa-github fa-2x "></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </footer>
 
       <script

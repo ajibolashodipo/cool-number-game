@@ -1,9 +1,10 @@
 //to load the page from the very top. Every single time
 $(window).on("beforeunload", function() {
-  //$("body").hide();
   $(window).scrollTop(0);
 });
-//
+//Global Scoped Variable
+var globalVar = {};
+
 //variable declaration
 var firstSubmit = document.getElementById("first-submit");
 var secondSubmit = document.getElementById("second-submit");
@@ -34,9 +35,11 @@ var thirdAlert = document.querySelector("#third-alert");
 firstSubmit.addEventListener("click", firstSub);
 secondSubmit.addEventListener("click", secondSub);
 thirdSubmit.addEventListener("click", thirdSub);
-//footer-correct jquery
+
 $(".footer-correct").click(function() {
-  $("html,body").animate({ scrollTop: 1500 }, "slow");
+  var divPosition2 = $(".footer-correct").offset();
+  $("html,body").animate({ scrollTop: divPosition2.top }, 1200);
+  //console.log("firstffff" + divPosition2.top);
   $(".footer-success").fadeIn(2000);
 });
 
@@ -57,8 +60,8 @@ function firstSub(e) {
   //
   // for bringing other sections into view
   var divPosition1 = $("#first-submit").offset();
-  $("html,body").animate({ scrollTop: divPosition1.top + 120 }, "slow");
-  console.log("first" + divPosition1.top);
+  $("html,body").animate({ scrollTop: divPosition1.top + 120 }, 1200);
+  //console.log("first" + divPosition1.top);
 
   //prevents default submission of form
   e.preventDefault();
@@ -76,6 +79,10 @@ function firstSub(e) {
     return;
   } else {
     display1.style.display = "block";
+
+    //assigning values to the global variable
+    globalVar.first = fs;
+    globalVar.second = ss;
 
     return {
       first: fs,
@@ -151,22 +158,25 @@ function secondSub(e) {
   finalTwo.innerHTML = tempArr[1];
 
   //call first function to get player names inputed previously
-  var ajibola = firstSub(e);
+  //var ajibola = firstSub(e);
 
   // an attempt at implementing download scroll on click
   var divPosition2 = $("#second-submit").offset();
-  $("html,body").animate({ scrollTop: divPosition2.top + 120 }, "slow");
-  console.log("second " + divPosition2.top);
+  $("html,body").animate({ scrollTop: divPosition2.top + 120 }, 1200);
+  //console.log("second " + divPosition2.top);
 
   //displaying the results in the HTML
-  playerOneRename.innerHTML = `${ajibola.first}, You chose:  `;
-  playerTwoRename.innerHTML = `${ajibola.second}, You chose:  `;
+  // globalVar.first = fs;
+  // globalVar.second = ss;
+
+  playerOneRename.innerHTML = `${globalVar.first}, You chose:  `;
+  playerTwoRename.innerHTML = `${globalVar.second}, You chose:  `;
 }
 function thirdSub(e) {
   // an attempt at implementing download scroll on click
   var divPosition3 = $("#third-submit").offset();
-  $("html,body").animate({ scrollTop: divPosition3.top + 120 }, "slow");
-  console.log("third" + divPosition3.top);
+  $("html,body").animate({ scrollTop: divPosition3.top + 120 }, 1200);
+  //console.log("third" + divPosition3.top);
 
   //secondSubmit.scrollIntoView();
   e.preventDefault();
