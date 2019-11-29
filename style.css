@@ -343,7 +343,7 @@ li {
 
 #real-footer {
   background: #373b44;
-  height: 15vh;
+  height: 10vh;
 }
 
 .real-footer-section {
@@ -351,12 +351,12 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  height: 10vh;
 }
 
 .real-footer-section h3 {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .real-footer-section .fab {
