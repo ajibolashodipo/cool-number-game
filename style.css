@@ -9,6 +9,7 @@ body {
   font-family: "Manjari", sans-serif;
   background: url(./img/number-lock-ish.jpg);
   padding: 0;
+  position: relative;
 }
 
 ul {
@@ -16,26 +17,14 @@ ul {
 }
 
 #dark-overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 700px;
+  height: 100%;
+  /* min-height: 700px; */
   background: rgba(0, 0, 0, 0.7);
 }
-
-/* #player-1 {
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 80%;
-  padding: 0 5%;
-}
-#player-2 {
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 80%;
-  padding: 0 5%;
-} */
 
 h2 {
   font-size: 3rem;
@@ -339,11 +328,16 @@ li {
   margin-left: 20%;
   border: 1px solid green;
   margin-right: 20%;
+  margin-bottom: 5%;
 }
 
 #real-footer {
   background: #373b44;
   height: 10vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .real-footer-section {
