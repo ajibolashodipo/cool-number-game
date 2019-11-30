@@ -169,8 +169,8 @@ function secondSub(e) {
   // globalVar.first = fs;
   // globalVar.second = ss;
 
-  playerOneRename.innerHTML = `${globalVar.first}, You chose:  `;
-  playerTwoRename.innerHTML = `${globalVar.second}, You chose:  `;
+  playerOneRename.innerHTML = `${globalVar.first}, you chose:  `;
+  playerTwoRename.innerHTML = `${globalVar.second}, you chose:  `;
 }
 function thirdSub(e) {
   // an attempt at implementing download scroll on click
